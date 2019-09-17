@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_menu_bible"
+        android:icon="@drawable/ic_home_selected"
+        android:title="@string/st_home_main_bottom_navigation"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_menu_favorites"
+        android:icon="@drawable/ic_favorite_selected"
+        android:title="@string/st_favorites_main_bottom_navigation"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_menu_daily_verse"
+        android:icon="@drawable/ic_daily_verse"
+        android:title="@string/st_daily_verse_main_bottom_navigation"
+        app:showAsAction="ifRoom" />
+
+</menu>

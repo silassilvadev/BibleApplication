@@ -1,0 +1,27 @@
+<resources>
+
+    <!--App-->
+    <string name="app_name">Bíblia Católica</string>
+
+    <!--Generic-->
+    <string name="st_generic_message_error_connection_server">"Não foi possível conectar ao servidor"</string>
+    <string name="st_accessibility_generic_image_error_connection_server">Imagem de erro de servidor</string>
+
+    <!--Main-->
+    <string name="st_generic_message_click_exit">"Pressione mais uma vez para sair"</string>
+
+    <!--Toolbar-->
+    <string name="st_title_toolbar">Bíblia Católica</string>
+    <string name="st_search_hint_toolbar">O que procura?</string>
+    <string name="st_back_button_toolbar">Botão Voltar</string>
+
+    <!--Bottom Navigation-->
+    <string name="st_home_main_bottom_navigation">Início</string>
+    <string name="st_daily_verse_main_bottom_navigation">Verso Diário</string>
+    <string name="st_favorites_main_bottom_navigation">Favoritos</string>
+
+    <!--Bible-->
+    <string name="st_bible_item_chapters">%1$s Capítulos</string>
+    <string name="st_bible_item_author">Autor: %1$s</string>
+
+</resources>
