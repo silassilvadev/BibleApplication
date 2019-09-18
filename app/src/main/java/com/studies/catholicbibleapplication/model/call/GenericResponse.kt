@@ -2,7 +2,7 @@ package com.studies.catholicbibleapplication.model.call
 
 import com.google.gson.Gson
 import com.studies.catholicbibleapplication.R
-import com.studies.catholicbibleapplication.model.BibleApplication.Companion.application
+import com.studies.catholicbibleapplication.model.CatholicBibleApplication.Companion.application
 import com.studies.catholicbibleapplication.model.entity.ErrorBibleResponse
 import okhttp3.ResponseBody
 import retrofit2.Call
