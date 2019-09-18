@@ -2,10 +2,10 @@ package com.studies.catholicbibleapplication.model
 
 import android.app.Application
 
-class BibleApplication: Application() {
+class CatholicBibleApplication: Application() {
 
     companion object {
-        lateinit var application: BibleApplication
+        lateinit var application: CatholicBibleApplication
     }
 
     override fun onCreate() {
