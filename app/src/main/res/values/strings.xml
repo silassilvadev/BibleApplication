@@ -3,25 +3,57 @@
     <!--App-->
     <string name="app_name">Bíblia Católica</string>
 
-    <!--Generic-->
-    <string name="st_generic_message_error_connection_server">"Não foi possível conectar ao servidor"</string>
-    <string name="st_accessibility_generic_image_error_connection_server">Imagem de erro de servidor</string>
+    <!--Error-->
+    <string name="st_error_not_receive_chapters">Erro ao carregar versículos</string>
+    <string name="st_error_not_connection_server">"Não foi possível conectar ao servidor"</string>
+
+    <string name="st_content_description_not_connection_server">Imagem de erro de servidor</string>
+
+    <!--Alert Dialog-->
+    <string name="st_alert_dialog_title">ATENÇÃO</string>
+    <string name="st_alert_dialog_positive_text">SIM</string>
+    <string name="st_alert_dialog_negative_text">NÃO</string>
+    <string name="st_alert_dialog_ok_text">OK</string>
+
+    <!--Search-->
+    <string name="st_error_searched">Erro ao pesquisar</string>
+
+    <!--Splash-->
+    <string name="st_content_description_logo_image">Imagem da Logo</string>
 
     <!--Main-->
     <string name="st_generic_message_click_exit">"Pressione mais uma vez para sair"</string>
 
-    <!--Toolbar-->
-    <string name="st_title_toolbar">Bíblia Católica</string>
-    <string name="st_search_hint_toolbar">O que procura?</string>
+    <!--Toolbar and Bottom Navigation-->
+    <string name="st_search_title_toolbar">Pesquisar</string>
+    <string name="st_favorite_title_toolbar">Favoritar</string>
+    <string name="st_share_title_toolbar">Compartilhar</string>
+    <string name="st_chapter_title_spinner_toolbar">Capítulos</string>
+    <string name="st_chapter_item_spinner_toolbar">Capítulo %1$s</string>
     <string name="st_back_button_toolbar">Botão Voltar</string>
 
-    <!--Bottom Navigation-->
     <string name="st_home_main_bottom_navigation">Início</string>
-    <string name="st_daily_verse_main_bottom_navigation">Verso Diário</string>
-    <string name="st_favorites_main_bottom_navigation">Favoritos</string>
 
     <!--Bible-->
+    <string name="st_bible_title_toolbar">Bíblia</string>
     <string name="st_bible_item_chapters">%1$s Capítulos</string>
     <string name="st_bible_item_author">Autor: %1$s</string>
+
+    <!--Favorites-->
+    <string name="st_favorites_title_toolbar">Favoritos</string>
+    <string name="st_favorites_number_chapters">%1$s capítulos favoritos</string>
+
+    <!--Daily Verse-->
+    <string name="st_daily_verse_title_toolbar">Versículo do dia</string>
+    <string name="st_daily_verse_details" translatable="false">%1$s %2$s, %3$s</string>
+    <string name="st_daily_verses_details" translatable="false">%1$s %2$s, %3$s-%4$s</string>
+
+    <!--Share-->
+    <string name="st_verse_selected" translatable="false">%1$s %2$s</string>
+    <string name="st_info_verse_selected" translatable="false">\"%1$s\" (%2$s %3$s, %4$s)</string>
+    <string name="st_info_verses_selected" translatable="false">\"%1$s\" (%2$s %3$s, %4$s-%5$s)</string>
+    <string name="st_title_share_verses">Enviado por Bíblia Católica</string>
+
+    <string name="st_error_limit_selected_share">Só é permitido compartilhar 5 versículos</string>
 
 </resources>

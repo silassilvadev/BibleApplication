@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.studies.catholicbibleapplication">
+    package="com.studies.catholicbible">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".model.CatholicBibleApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_bible"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_bible"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.chapter.ChapterActivity"></activity>
-        <activity android:name=".view.main.MainActivity">
+        <activity android:name=".view.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.main.MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".view.chapter.DynamicChaptersActivity"
+            android:parentActivityName=".view.main.MainActivity" />
     </application>
 
 </manifest>

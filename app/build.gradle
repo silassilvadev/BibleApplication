@@ -1,18 +1,17 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.studies.catholicbibleapplication"
+        applicationId "com.studies.catholicbible"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 2
-        versionName "1.0.1"
+        versionName "0.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -20,11 +19,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BIBLE_URL", bibleUrl
+            buildConfigField "Boolean", "ANALYTICS", "true"
         }
 
         debug {
             debuggable true
             buildConfigField "String", "BIBLE_URL", bibleUrl
+            buildConfigField "Boolean", "ANALYTICS", "false"
         }
     }
 }
@@ -55,4 +56,9 @@ dependencies {
     //ViewModel Arch
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.1.0'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
 }

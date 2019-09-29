@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--App-->
+    <string name="app_name">Catholic Bible</string>
+
+    <!--Error-->
+    <string name="st_error_limit_selected_share">Only five verses allowed</string>
+    <string name="st_error_not_connection_server">Unable to connect to server</string>
+
+    <string name="st_content_description_not_connection_server">Server error image</string>
+
+    <!--Alert Dialog-->
+    <string name="st_alert_dialog_title">ATTENTION</string>
+    <string name="st_alert_dialog_positive_text">YES</string>
+    <string name="st_alert_dialog_negative_text">NO</string>
+    <string name="st_alert_dialog_ok_text">OK</string>
+
+    <!--Search-->
+    <string name="st_error_searched">Search error</string>
+
+    <!--Splash-->
+    <string name="st_content_description_logo_image">Image Logo</string>
+
+
+    <!--Main-->
+    <string name="st_generic_message_click_exit">Press once more to exit</string>
+
+    <!--Toolbar and Bottom Navigation-->
+    <string name="st_search_title_toolbar">Search</string>
+    <string name="st_favorites_title_toolbar">Favorites</string>
+    <string name="st_share_title_toolbar">Share</string>
+    <string name="st_chapter_title_spinner_toolbar">Chapters</string>
+    <string name="st_chapter_item_spinner_toolbar">Chapter %1$s</string>
+    <string name="st_back_button_toolbar">Back Button</string>
+
+    <string name="st_home_main_bottom_navigation">Start</string>
+
+    <!--Bible-->
+    <string name="st_bible_title_toolbar">Bible</string>
+    <string name="st_bible_item_chapters">%1$s Chapters</string>
+    <string name="st_bible_item_author">Author: %1$s</string>
+
+    <!--Favorites-->
+    <string name="st_favorite_title_toolbar">Favorite</string>
+    <string name="st_favorites_number_chapters">%1$s favorite chapters</string>
+
+    <!--Daily Verse-->
+    <string name="st_daily_verse_title_toolbar">Verse of the Day</string>
+    <string name="st_title_share_verses">" Submitted by Catholic Bible"</string>
+
+    <string name="st_error_not_receive_chapters">Error loading verses</string>
+
+</resources>

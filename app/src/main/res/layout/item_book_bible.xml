@@ -3,54 +3,83 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
-    android:layout_margin="4dp"
+    android:layout_height="260dp"
+    android:layout_margin="3dp"
+    android:background="@android:color/transparent"
     app:cardElevation="4dp"
-    app:cardCornerRadius="0dp"
-    android:background="@android:color/darker_gray">
+    app:cardCornerRadius="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/item_book_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cross"
+            android:scaleType="fitCenter"
+            android:padding="20dp"
+            android:contentDescription="@string/st_content_description_not_connection_server"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
         <TextView
             android:id="@+id/item_book_abbrev"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="top|start"
             android:textSize="36sp"
             android:textStyle="bold"
-            android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/item_book_group"
+            android:id="@+id/item_book_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@+id/item_book_abbrev"
+            app:layout_constraintStart_toStartOf="@+id/item_book_abbrev"/>
+
+        <TextView
+            android:id="@+id/item_book_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:textColor="@color/colorPrimary"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/item_book_author"
-            app:layout_constraintEnd_toEndOf="@+id/item_book_abbrev" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/item_book_author"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:textColor="@color/colorPrimary"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/item_book_chapters"
-            app:layout_constraintEnd_toEndOf="@+id/item_book_abbrev" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/item_book_chapters"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:textColor="@color/colorPrimary"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/item_book_abbrev" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

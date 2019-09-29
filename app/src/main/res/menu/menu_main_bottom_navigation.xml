@@ -10,14 +10,14 @@
 
     <item
         android:id="@+id/item_menu_favorites"
-        android:icon="@drawable/ic_favorite_selected"
-        android:title="@string/st_favorites_main_bottom_navigation"
+        android:icon="@drawable/ic_favorite_filled"
+        android:title="@string/st_favorite_title_toolbar"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/item_menu_daily_verse"
         android:icon="@drawable/ic_daily_verse"
-        android:title="@string/st_daily_verse_main_bottom_navigation"
+        android:title="@string/st_daily_verse_title_toolbar"
         app:showAsAction="ifRoom" />
 
 </menu>

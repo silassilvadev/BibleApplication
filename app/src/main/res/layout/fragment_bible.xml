@@ -7,13 +7,17 @@
     android:layout_height="match_parent"
     android:animationCache="true"
     android:animateLayoutChanges="true"
-    tools:context=".view.bible.BibleFragment">
+    tools:context=".view.main.bible.BibleFragment">
 
-    <include layout="@layout/generic_toolbar"
-        android:id="@+id/bible_toolbar"
-        app:layout_constraintTop_toTopOf="parent"
+    <ProgressBar
+        android:id="@+id/bible_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/bible_swipe_refresh"
@@ -22,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bible_toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +46,7 @@
                 android:id="@+id/bible_not_response_text"
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
-                android:text="@string/st_generic_message_error_connection_server"
+                android:text="@string/st_error_not_connection_server"
                 android:textSize="16sp"
                 android:drawableTop="@drawable/ic_error_response"
                 android:visibility="gone"/>
