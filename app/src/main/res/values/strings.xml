@@ -6,6 +6,7 @@
     <!--Error-->
     <string name="st_error_not_receive_chapters">Erro ao carregar versículos</string>
     <string name="st_error_not_connection_server">"Não foi possível conectar ao servidor"</string>
+    <string name="st_error_network_unavailable">Sem conexão com a internet</string>
 
     <string name="st_content_description_not_connection_server">Imagem de erro de servidor</string>
 

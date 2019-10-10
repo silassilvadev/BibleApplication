@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.animation.AnimationUtils
 import androidx.core.view.isVisible
 import com.studies.catholicbible.R
+import com.studies.catholicbible.extensions.animateFade
 import com.studies.catholicbible.extensions.initActivity
 import com.studies.catholicbible.view.main.MainActivity
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -20,6 +21,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             splash_progress_bar.isVisible = false
             startActivity(Intent(this, MainActivity::class.java))
+            animateFade()
             finish()
         }, 3500L)
     }

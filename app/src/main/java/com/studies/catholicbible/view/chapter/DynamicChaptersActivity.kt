@@ -26,8 +26,6 @@ class DynamicChaptersActivity: AppCompatActivity(),
     private lateinit var itemFavorite: MenuItem
     private lateinit var itemShare: MenuItem
     private lateinit var book: Book
-    private lateinit var readingBook: ReadingBook
-    private lateinit var adapter: DynamicVerseAdapter
 
     companion object {
         const val KEY_BOOK_SELECTED = "readingBooks"
@@ -59,9 +57,10 @@ class DynamicChaptersActivity: AppCompatActivity(),
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item){
-            itemFavorite -> selectedFragment.initFavorite()
-            itemShare -> selectedFragment.initSharing()
+        when (item.itemId){
+            itemFavorite.itemId -> selectedFragment.initFavorite()
+            itemShare.itemId -> selectedFragment.initSharing()
+            android.R.id.home -> onBackPressed()
         }
         return super.onOptionsItemSelected(item)
     }

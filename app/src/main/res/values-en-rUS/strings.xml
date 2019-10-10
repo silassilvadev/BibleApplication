@@ -49,5 +49,6 @@
     <string name="st_title_share_verses">" Submitted by Catholic Bible"</string>
 
     <string name="st_error_not_receive_chapters">Error loading verses</string>
+    <string name="st_error_network_unavailable">No Internet Connection</string>
 
 </resources>

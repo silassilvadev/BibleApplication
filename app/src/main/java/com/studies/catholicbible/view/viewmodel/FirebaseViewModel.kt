@@ -2,6 +2,7 @@ package com.studies.catholicbible.view.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.database.FirebaseDatabase
 import com.studies.catholicbible.model.calls.IGenericProtocol
 import com.studies.catholicbible.model.entity.Book
 import com.studies.catholicbible.model.entity.ReadingBook
@@ -14,6 +15,10 @@ class FirebaseViewModel: ViewModel(){
 
     private lateinit var protocol: IGenericProtocol
     private lateinit var mutableReadingBooks: MutableLiveData<ArrayList<ReadingBook>>
+
+    private val databaseReference = FirebaseDatabase.getInstance().reference
+    private val userReference = databaseReference.child("users")
+    private val bookReference = databaseReference.child("book")
 
     fun setProtocol(protocol: IGenericProtocol){
         this.protocol = protocol
@@ -73,5 +78,9 @@ class FirebaseViewModel: ViewModel(){
         mutableReadingBooks.value = books
 
         return mutableReadingBooks
+    }
+
+    fun setFavoriteTest(readingBook: ReadingBook, verse: Verse){
+        
     }
 }

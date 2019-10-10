@@ -26,6 +26,7 @@ class ClientService {
             .readTimeout(20, TimeUnit.SECONDS)
             .connectTimeout(20, TimeUnit.SECONDS)
             .writeTimeout(20, TimeUnit.SECONDS)
+            .addInterceptor(logging)
             .build()
     }
 

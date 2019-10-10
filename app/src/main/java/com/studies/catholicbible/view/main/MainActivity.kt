@@ -27,7 +27,6 @@ class MainActivity: AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        animateFade()
         setSupportActionBar(main_toolbar)
         supportActionBar?.title = getString(menuSelected.title)
         initView()
@@ -73,7 +72,6 @@ class MainActivity: AppCompatActivity(),
             makeToast(getString(R.string.st_generic_message_click_exit))
         } else {
             super.onBackPressed()
-            animateTransition(false)
         }
     }
 

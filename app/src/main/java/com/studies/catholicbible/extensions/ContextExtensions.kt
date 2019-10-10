@@ -3,28 +3,36 @@ package com.studies.catholicbible.extensions
 import android.app.Activity
 import android.app.Application
 import android.content.Context
-import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
-import android.os.Bundle
-import android.os.Parcelable
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.studies.catholicbible.R
 import com.studies.catholicbible.model.CatholicBibleApplication
-import java.io.Serializable
 
 fun getApplication(): Application {
     return CatholicBibleApplication.application
 }
 
-fun isConnected(): Boolean{
+fun isNetworkConnected(): Boolean {
     val connectivityManager =
         getApplication().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-    return connectivityManager.activeNetworkInfo?.isConnectedOrConnecting ?: false
+
+    if (Build.VERSION.SDK_INT < 23) {
+        connectivityManager.activeNetworkInfo?.let {
+            return it.isConnected && (it.type == ConnectivityManager.TYPE_WIFI
+                    || it.type == ConnectivityManager.TYPE_MOBILE)
+        }
+    } else {
+        connectivityManager.activeNetwork?.let { network ->
+            connectivityManager.getNetworkCapabilities(network)?.let {
+                return it.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                        || it.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+            }
+        }
+    }
+    return false
 }
 
 fun Activity.forceHideKeyboard() {

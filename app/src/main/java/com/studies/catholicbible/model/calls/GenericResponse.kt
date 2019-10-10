@@ -2,6 +2,7 @@ package com.studies.catholicbible.model.calls
 
 import com.google.gson.Gson
 import com.studies.catholicbible.R
+import com.studies.catholicbible.extensions.isNetworkConnected
 import com.studies.catholicbible.model.CatholicBibleApplication.Companion.application
 import com.studies.catholicbible.model.entity.ErrorBibleResponse
 import okhttp3.ResponseBody
@@ -18,12 +19,13 @@ abstract class GenericResponse<T> : Callback<T> {
     abstract fun onError(errorBible: ErrorBibleResponse)
 
     override fun onFailure(call: Call<T>, throwable: Throwable) {
-        onError(
-            ErrorBibleResponse(
-                throwable.message
-                    ?: application.getString(R.string.st_error_not_connection_server)
-            )
-        )
+        onError(ErrorBibleResponse(
+            if (isNetworkConnected()) {
+                throwable.message ?: application.getString(R.string.st_error_not_connection_server)
+            } else {
+                application.getString(R.string.st_error_network_unavailable)
+            }
+        ))
     }
 
     override fun onResponse(call: Call<T>, response: Response<T>) {
@@ -38,11 +40,9 @@ abstract class GenericResponse<T> : Callback<T> {
                     )
                 )
             } catch (exception: Exception) {
-                val errorResponse =
-                    ErrorBibleResponse(
-                        exception.message
-                            ?: application.getString(R.string.st_error_not_connection_server)
-                    )
+                val errorResponse = ErrorBibleResponse(
+                    exception.message
+                            ?: application.getString(R.string.st_error_not_connection_server))
                 onError(errorResponse)
             }
         }
