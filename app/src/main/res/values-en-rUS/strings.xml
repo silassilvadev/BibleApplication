@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--App-->
-    <string name="app_name">Catholic Bible</string>
+    <string name="app_name">Bible</string>
 
     <!--Error-->
     <string name="st_error_limit_selected_share">Only five verses allowed</string>

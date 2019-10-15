@@ -1,7 +1,7 @@
 <resources>
 
     <!--App-->
-    <string name="app_name">Bíblia Católica</string>
+    <string name="app_name">Bíblia</string>
 
     <!--Error-->
     <string name="st_error_not_receive_chapters">Erro ao carregar versículos</string>
