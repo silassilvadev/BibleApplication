@@ -1,7 +1,7 @@
 package com.studies.bibleapplication.model.service
 
-import com.studies.bibleapplication.model.entity.Book
-import com.studies.bibleapplication.model.entity.ReadingBook
+import com.studies.bibleapplication.entity.Book
+import com.studies.bibleapplication.entity.ReadingBook
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

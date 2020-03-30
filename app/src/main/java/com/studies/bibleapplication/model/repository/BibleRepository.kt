@@ -1,23 +1,21 @@
 package com.studies.bibleapplication.model.repository
 
-import com.studies.bibleapplication.model.calls.GenericResponse
-import com.studies.bibleapplication.model.calls.IGenericResponse
-import com.studies.bibleapplication.model.entity.*
-import com.studies.bibleapplication.model.service.ClientService
+import com.studies.bibleapplication.model.calls.BaseCallback
+import com.studies.bibleapplication.model.calls.IBaseResponse
+import com.studies.bibleapplication.entity.*
+import com.studies.bibleapplication.model.client.ClientService.Companion.bibleService
 import kotlin.collections.ArrayList
 
 class BibleRepository {
 
-    private var bibleService = ClientService().configureBibleService()
-
-    fun getBooks(listener: IGenericResponse<ArrayList<Book>>){
-        bibleService.getBooks().enqueue(object : GenericResponse<ArrayList<Book>>(){
+    fun getBooks(listener: IBaseResponse<ArrayList<Book>>){
+        bibleService.getBooks().enqueue(object : BaseCallback<ArrayList<Book>>(){
             override fun onSuccess(response: ArrayList<Book>) {
                 listener.onResponseSuccess(response)
             }
 
-            override fun onError(errorBible: ErrorBibleResponse) {
-                listener.onResponseError(errorBible.message)
+            override fun onError(error: ErrorResponse) {
+                listener.onResponseError(error.message)
             }
         })
     }
@@ -25,15 +23,15 @@ class BibleRepository {
     fun getChapter(version: String,
                    bookAbbrev: String,
                    chapter: Int,
-                   listener: IGenericResponse<ReadingBook>) {
+                   listener: IBaseResponse<ReadingBook>) {
         bibleService.getChapter(version, bookAbbrev, chapter)
-            .enqueue(object : GenericResponse<ReadingBook>(){
+            .enqueue(object : BaseCallback<ReadingBook>(){
             override fun onSuccess(response: ReadingBook) {
                 listener.onResponseSuccess(response)
             }
 
-            override fun onError(errorBible: ErrorBibleResponse) {
-                listener.onResponseError(errorBible.message)
+            override fun onError(error: ErrorResponse) {
+                listener.onResponseError(error.message)
             }
 
         })

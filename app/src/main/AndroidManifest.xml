@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.studies.bibleapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,24 +8,30 @@
     <application
         android:name="com.studies.bibleapplication.model.BibleApplication"
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher_bible"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_bible"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.studies.bibleapplication.view.splash.SplashActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name="com.studies.bibleapplication.ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name="com.studies.bibleapplication.view.main.MainActivity"
+            android:name="com.studies.bibleapplication.ui.main.MainActivity"
             android:windowSoftInputMode="adjustPan"/>
+
         <activity
-            android:name="com.studies.bibleapplication.view.chapter.DynamicChaptersActivity"
-            android:parentActivityName="com.studies.bibleapplication.view.main.MainActivity" />
+            android:name="com.studies.bibleapplication.ui.chapter.DynamicChaptersActivity"
+            android:parentActivityName="com.studies.bibleapplication.ui.main.MainActivity" />
+
     </application>
 
 </manifest>

@@ -53,8 +53,15 @@
     <string name="st_verse_selected" translatable="false">%1$s %2$s</string>
     <string name="st_info_verse_selected" translatable="false">\"%1$s\" (%2$s %3$s, %4$s)</string>
     <string name="st_info_verses_selected" translatable="false">\"%1$s\" (%2$s %3$s, %4$s-%5$s)</string>
-    <string name="st_title_share_verses">Enviado por Bíblia Católica</string>
+    <string name="st_title_share_verses">Enviado por Bíblia</string>
 
     <string name="st_error_limit_selected_share">Só é permitido compartilhar 5 versículos</string>
+
+    <!-- region AUTENTICATE -->
+    <string name="biometric_title">Autenticação Necessária</string>
+    <string name="biometric_button_cancel">Cancelar</string>
+
+    <string name="error_biometric_invalid">Biometria não encontrada</string>
+    <!-- endregion -->
 
 </resources>

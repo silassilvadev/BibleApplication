@@ -1,8 +1,8 @@
 package com.studies.bibleapplication.model.repository
 
 import com.google.firebase.database.FirebaseDatabase
-import com.studies.bibleapplication.model.entity.User
-import com.studies.bibleapplication.model.entity.Verse
+import com.studies.bibleapplication.entity.User
+import com.studies.bibleapplication.entity.Verse
 
 class LoginRepository {
 

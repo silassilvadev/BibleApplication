@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:animationCache="true"
-    tools:context=".view.chapter.DynamicChaptersActivity">
+    tools:context=".ui.chapter.DynamicChaptersActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/dynamic_chapter_toolbar"

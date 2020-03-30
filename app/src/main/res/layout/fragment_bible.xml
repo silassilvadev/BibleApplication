@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:animationCache="true"
     android:animateLayoutChanges="true"
-    tools:context=".view.main.bible.BibleFragment">
+    tools:context=".ui.main.bible.BibleFragment">
 
     <ProgressBar
         android:id="@+id/bible_progress"
